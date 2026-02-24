@@ -4,9 +4,9 @@ async function main() {
   const HealthVault = await ethers.getContractFactory("HealthVault");
   const contract = await HealthVault.deploy();
 
-  await contract.deployed();
+  await contract.waitForDeployment();
 
-  console.log("HealthVault deployed to:", contract.address);
+  console.log("HealthVault deployed to:", await contract.getAddress());
 }
 
 main().catch((error) => {
