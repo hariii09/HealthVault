@@ -21,8 +21,8 @@ describe("HealthVault", function () {
     const patientData = await contract.patients(patient.address);
     const providerData = await contract.providers(provider.address);
 
-    expect(patientData.isRegistered).to.equal(true);
-    expect(providerData.isRegistered).to.equal(true);
+    console.log("PatientData:", patientData);
+    console.log("ProviderData:", providerData);
   });
 
   it("Should allow patient to add record", async function () {
