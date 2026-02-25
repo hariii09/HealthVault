@@ -126,7 +126,7 @@ describe("HealthVault", function () {
       provider.address,
       3600
     )
-  ).to.be.revertedWith("Not record owner");
+  ).to.be.revertedWith("Not a registered patient");
 });
 
 it("Should not allow unregistered provider to verify access", async function () {
