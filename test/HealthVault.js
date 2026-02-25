@@ -107,4 +107,42 @@ describe("HealthVault", function () {
       contract.connect(provider).verifyAccess(1)
     ).to.be.revertedWith("Consent expired");
   });
+
+  it("Should not allow non-patient to add record", async function () {
+    await expect(
+        contract.connect(provider).addRecord("CID", "Report")
+    ).to.be.revertedWith("Not a registered patient");
+  });
+
+  it("Should not allow non-owner to grant access", async function () {
+  await contract.connect(patient).registerPatient();
+  await contract.connect(provider).registerProvider();
+
+  await contract.connect(patient).addRecord("CID", "Report");
+
+  await expect(
+    contract.connect(provider).grantAccess(
+      1,
+      provider.address,
+      3600
+    )
+  ).to.be.revertedWith("Not record owner");
+});
+
+it("Should not allow unregistered provider to verify access", async function () {
+  await contract.connect(patient).registerPatient();
+  await contract.connect(patient).addRecord("CID", "Report");
+
+  await expect(
+    contract.connect(provider).verifyAccess(1)
+  ).to.be.revertedWith("Not a registered provider");
+});
+
+it("Should not allow duplicate registration", async function () {
+  await contract.connect(patient).registerPatient();
+
+  await expect(
+    contract.connect(patient).registerPatient()
+  ).to.be.revertedWith("Already registered");
+});
 });
