@@ -1,0 +1,152 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\hari0\\OneDrive\\Desktop\\HealthVault\\contracts\\AccessControl.sol": {
+      "lastModificationDate": 1776029500468,
+      "contentHash": "1d1b9e427ce14b67eb2c19c4c57a8245",
+      "sourceName": "contracts/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./PatientRegistry.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "C:\\Users\\hari0\\OneDrive\\Desktop\\HealthVault\\contracts\\PatientRegistry.sol": {
+      "lastModificationDate": 1776029496103,
+      "contentHash": "bbbeb05c3f73e7e6547da850273e43b2",
+      "sourceName": "contracts/PatientRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "PatientRegistry"
+      ]
+    },
+    "C:\\Users\\hari0\\OneDrive\\Desktop\\HealthVault\\contracts\\RecordRegistry.sol": {
+      "lastModificationDate": 1776029504093,
+      "contentHash": "3daed86c1bb6aee5c2b8fc395950e14b",
+      "sourceName": "contracts/RecordRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./PatientRegistry.sol",
+        "./AccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "RecordRegistry"
+      ]
+    },
+    "C:\\Users\\hari0\\OneDrive\\Desktop\\HealthVault\\contracts\\EmergencyAccess.sol": {
+      "lastModificationDate": 1776029508136,
+      "contentHash": "4ec9113e2dbc2b859b04ac4213d84689",
+      "sourceName": "contracts/EmergencyAccess.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./PatientRegistry.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "EmergencyAccess"
+      ]
+    }
+  }
+}
